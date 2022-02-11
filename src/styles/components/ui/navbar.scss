@@ -1,0 +1,126 @@
+.portfolio__navbarContainer{
+    background-color: $primary;
+    z-index: 100;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  .portfolio__navbarWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio__logoContainer{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    svg {
+        fill: #fff;
+        margin-right: 0.5rem;
+    }
+    @media screen and (max-width: 960px){
+        flex: 0.98;
+    }
+}
+
+.portfolio__menuItem{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.portfolio__menuItemLink{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: 0.3s all ease;
+    
+    &:hover {
+      background-color: darken($color: #2279E6, $amount: 10);
+    }
+    div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        svg {
+          display: none;
+          fill: $white;
+          margin-right: 0.5rem;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        width: 100%;
+    
+        div {
+          width: 30%;
+          justify-content: left;
+    
+          svg {
+            display: flex;
+          }
+        }
+      }
+    
+      @media screen and (max-width: 880px) {
+        div {
+          width: 40%;
+          justify-content: left;
+    
+          svg {
+            display: flex;
+          }
+        }
+      }
+    
+      @media screen and (max-width: 500px) {
+        div {
+          width: 60%;
+          justify-content: left;
+    
+          svg {
+            display: flex;
+          }
+        }
+      }
+    
+      @media screen and (max-width: 260px) {
+        div {
+          width: 100%;
+          justify-content: left;
+    
+          svg {
+            display: flex;
+          }
+        }
+      }
+}
+
+.portfolio__mobileIcon{
+    display: none;
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+      align-items: center;
+  
+      svg {
+        fill: $white;
+      }
+    }
+}
+

@@ -1,0 +1,66 @@
+.portfolio__skillset-container{
+    padding: 40px 0;
+    background-color: $primary;
+    overflow-x: hidden;
+    @include propiertiesContainer
+}
+.portfolio__skillset-title{
+    text-align: center;
+}
+
+.portfolio__skillset-line{
+    width: 800px;
+    height: 1px;
+    background: linear-gradient(90deg,#2063F0, #fff, #2063F0);
+    @media screen and (max-width: 960px){
+        width: 100%;
+    }
+}
+
+.portfolio__skillset-wrapper{
+    display: grid;
+    margin: 3rem 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    width: 100%;
+    text-align: center;
+    @media screen and (max-width: 960px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.portfolio__skillset-skill{
+    position: relative;
+    img {
+        max-width: 4rem;
+    }
+    span {
+        background-color: rgba(0,0,0,.75);
+        position: absolute;
+        border-radius: 0.5rem;
+        left: 25%;
+        opacity: 0;
+        padding: 0.3rem 0.3rem;
+        text-align: center;
+        transition: opacity .3s ease,transform .3s ease;
+        min-width: 120px;
+    }
+    &:hover span{
+        transform: translate(0px, -55px);
+        opacity: 1;
+    }
+    @media screen and (max-width: 960px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        span {
+            opacity: 1;
+            position: static;
+            top: 0;
+            left: 0;
+    
+        }
+    }
+}

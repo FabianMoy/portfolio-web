@@ -1,0 +1,30 @@
+.portfolio__contact-container{
+    padding-top: 30px;
+    @include propiertiesContainer
+}
+
+.portfolio__contact-title{
+    color: #fff;
+}
+
+.portfolio__contact-form-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.portfolio__contact-form-iconAside {
+    text-align: center;
+    margin-right: 10%;
+    svg {
+        width: 100%;
+        height: auto;
+    }
+    p{
+        font-size: 16px;
+    }
+    @media screen and (max-width: 960px){
+        display: none;
+    }
+}

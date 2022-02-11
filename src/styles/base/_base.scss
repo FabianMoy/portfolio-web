@@ -1,0 +1,22 @@
+*{
+    font-family: 'Source Code Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white;
+    font-size: 1.3rem;
+}
+
+html,body{
+    display: block;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $primary;
+}
+
+a{
+    text-decoration: none;
+}

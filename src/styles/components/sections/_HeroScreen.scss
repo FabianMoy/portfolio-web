@@ -1,0 +1,53 @@
+.p-hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+.p-hero__img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../assets/images/back.jpg');
+    background-size: cover;
+    z-index: -123;
+}
+
+.p-hero__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.p-hero__profile-picture{
+    background-image: url('../../../assets/images/profileAvatar.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.social-media__icons{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    a{
+        font-size: 1.1rem;
+        padding: 10px;
+    }   
+}
+
+.whatsapp-icon:hover{
+    background-color: #25D366;
+}
+
+.linkedin-icon:hover{
+    background-color: #0E76A8;
+}
+
+.github-icon:hover{
+    background-color: #000000;
+}

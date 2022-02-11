@@ -1,0 +1,124 @@
+.formContactMe__form-wrapper{
+    margin: .5rem;
+    width: 45%;
+    padding: 30px 15px 15px 15px;
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow:  2px 2px 2px 1px #0000008e;
+    display: grid;
+    grid-template-areas:
+        "email email name"
+        "textarea textarea textarea"
+        "button . .";
+    :first-child{
+        grid-area: email;
+    }
+
+    :nth-child(2){
+        grid-area: name;
+    }
+    :nth-child(3){
+        grid-area: textarea;
+    }
+    div {
+        position: relative;
+    }
+    @media screen and (max-width: 960px){
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    :nth-child(4){
+        grid-area: button;
+        svg{
+            fill: $primary;
+            font-size: 40px;
+            margin-left: 37%;
+        }
+    }
+}   
+
+.formContactMe__form-input, .formContactMe__form-textarea{
+    border: none;
+    width: 96%;
+    border-bottom: 2px solid $grey;
+    color: $grey;
+    transition: all .3s ease;
+    margin: 15px 0 15px 2%;
+    padding: 5px 0;
+    font-size: 0.8rem;
+    z-index: 300;
+    background: none;
+
+    &:focus , &:valid{
+        outline: none;
+        @include background-ice;
+        ~label{
+            @include translate-top;
+        }
+    }
+}
+
+.formContactMe__form-textarea {
+    resize: none;
+    height: 100px;
+    overflow-y: auto;
+    ~svg{
+        fill: $primary;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: .8s;
+        animation-name: spinner-loading;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+.formContactMe__form-button{
+    width: 100%;
+    color: $white;
+    border: none;
+    border-radius: 1rem;
+    background-color: $primary;
+    grid-area: button;
+    padding: .3rem 0;
+    z-index: 300;
+
+    &:hover{
+        background-color: darken($color: $primary, $amount: 10);
+        cursor: pointer;
+    }
+    &:disabled{
+        background-color: #b1b1b1;
+        box-shadow: none;
+    }
+    &:focus{
+        box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    }
+}   
+
+label {
+    color: $grey;
+    position: absolute;
+    left: 2%;
+    top: 15px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    ~p{
+        color: lighten($color: $red, $amount: 10);
+        position: relative;
+        font-size: 13px;
+        left: 2%;
+        font-family: 'Trebuchet MS';
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes spinner-loading{
+    0% {
+        transform: rotate(0deg)
+    } to {
+        transform: rotate(1turn)
+    }
+  }

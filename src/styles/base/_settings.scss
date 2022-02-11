@@ -1,0 +1,32 @@
+//colors
+$white: #fff;
+$black: #000;
+$primary: #2279E6;
+$ice: #e6f0ff;
+$grey: #686868;
+$red: #ff0000;
+$primary-grey: hsl(0, 0%, 18.82%);
+$grey-light: #979797;
+$dark-white: rgba(255, 255, 255, 0.7);
+
+
+// mixins
+
+@mixin translate-top {
+    color: lighten($color: $grey, $amount: 25);
+    transform: translate(-5%, -100%) scale(0.85);    
+}
+@mixin background-ice {
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom: 2px solid $primary;
+    background-color: $ice;
+}
+
+@mixin propiertiesContainer($theme: $primary) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-195deg, $theme 50%, darken($color: $theme, $amount: 10) 50%);
+}

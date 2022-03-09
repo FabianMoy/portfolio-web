@@ -3,7 +3,7 @@ import { useForm } from '../../hooks/useForm'
 import { setData } from '../../helpers/setData'
 import { FaRedoAlt, FaCheckCircle } from 'react-icons/fa'
 import {gsap} from 'gsap';
-
+import { FaTelegramPlane } from 'react-icons/fa'
 
 export const FormContactMe = () => {
 
@@ -91,6 +91,7 @@ export const FormContactMe = () => {
                 disabled={loading}
             >
                 Submit
+                <FaTelegramPlane />
             </button>
         </form>
     )

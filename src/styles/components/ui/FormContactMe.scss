@@ -77,20 +77,22 @@
 
 .formContactMe__form-button{
     width: 100%;
+    display: flex;
+    justify-content: center;
     color: $white;
     border: none;
     border-radius: 1rem;
-    background-color: $primary;
+    background: linear-gradient($primary 0%, #1d67c0 100%);
     grid-area: button;
     padding: .3rem 0;
     z-index: 300;
 
     &:hover{
-        background-color: darken($color: $primary, $amount: 10);
         cursor: pointer;
+        background: darken($color: $primary, $amount: 10);
     }
     &:disabled{
-        background-color: #b1b1b1;
+        background: #b1b1b1;
         box-shadow: none;
     }
     &:focus{

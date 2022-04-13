@@ -2,11 +2,9 @@ import React from 'react';
 
 export const ButtonCV = () => {
 
-
-
     return (
         <a
-            href='https://drive.google.com/uc?export=download&id=1CtkaQXELJhzLhz9-XBqN6hSRWhIv4XzB'
+            href='https://drive.google.com/uc?export=download&id=117orLv2JIWVjKLCjN2o_i9ti6AynsLW4'
             className='portfolio__download-cv__container'
             download='resumecv.pdf'
         >
